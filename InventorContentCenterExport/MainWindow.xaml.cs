@@ -128,8 +128,9 @@ namespace InventorContentCenterExport
 
         private void Window_Closed(object sender, EventArgs e)
         {
-            if (_oConnection.InventorApp != null)
-                _oConnection.InventorApp.Quit();
+            _oConnection?.InventorApp?.Quit();
+            //if (_oConnection.InventorApp != null)
+            //    _oConnection.InventorApp.Quit();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)

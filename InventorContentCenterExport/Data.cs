@@ -137,7 +137,7 @@ namespace InventorContentCenterExport
                     strContentPartFileName = oFamily.CreateMember(oRow, out error, out strErrorMessage);
                     _filesCount++;
                     using (System.IO.StreamWriter file =
-           new System.IO.StreamWriter(@"C:\EXPORT TEST\log.txt", true))
+           new System.IO.StreamWriter(System.IO.Path.GetTempPath() +@"\InventorContentCenterExportLog.txt", true))
                     {
                         file.WriteLine(strContentPartFileName + "|||" + error + "|||" + strErrorMessage);
                     }
